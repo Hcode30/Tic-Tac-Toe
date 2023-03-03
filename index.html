@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <div id="start">
+        <h1>Tic-Tac-Toe Game</h1>
+        <form id="players-form">
+            <label for="fname">Player 1 Name: </label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Player 2 Name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="submit" value="Start New Game" id="submit_btn" onclick="return startgame()">
+        </form>
+    </div>
+    <div id="container">
+        <div class="cards">
+            <div class="player1">
+                <p id="p1"></p>
+                <p class="scores"><span class="hidden">.</span>Score:<span class="hidden">.</span></p><span
+                    id="s1">0</span>
+            </div>
+            <div class="player2">
+                <p id="p2"></p>
+                <p class="scores"><span class="hidden">.</span>Score:<span class="hidden">.</span></p><span
+                    id="s2">0</span>
+            </div>
+        </div>
+        <div class="turns-card">
+            <span id="turn"></span> Turn
+        </div>
+        <div class="game">
+            <div class="ttt">
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+                <div class="box" id="9"></div>
+            </div>
+        </div>
+        <div class="clear"><span>Clear</span></div>
+        <div class="popup hide" id="popup"><span id="winner"></span></div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

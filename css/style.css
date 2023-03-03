@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --time: 1s;
+}
+
+
+#container {
+    display: none;
+    background-color: #a9b8ff;
+    background-image: linear-gradient(180deg, #a9b8ff 0%, #ffedd9 100%);
+        
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    transition-duration: 1s;
+}
+
+#start {
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#start h1 {
+    font-size: 6vw;
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+    color: rgb(53, 21, 0);
+    text-align: center;
+}
+
+#players-form {
+    background-color: #ff673b;
+    background-image: linear-gradient(180deg, #ff673b 0%, #FF2525 74%);
+    
+    border: 1px solid white;
+    -webkit-box-shadow: 6px 13px 87px -21px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 6px 13px 87px -21px rgba(0, 0, 0, 0.64);
+    box-shadow: 6px 13px 87px -21px rgba(0, 0, 0, 0.64);
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    width: max(40vw, 400px);
+    height: max-content;
+}
+
+#players-form label,
+input {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 1vh 0;
+    text-align: center;
+    font-size: 3vw;
+}
+
+#submit_btn {
+    border-radius: 3em;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 2vw;
+    padding: 20px;
+    transition: all var(--time);
+    cursor: pointer;
+    margin: 5px;
+    transition-duration: var(--time);
+    border: 2px solid white;
+}
+
+#submit_btn:hover {
+    background-color: #34495e;
+    border-color: #d7ff8c;
+    color: #d7ff8c;
+    transition-duration: var(--time);
+}
+
+.MyClass {
+    display: none;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: max-content;
+    align-items: center;
+    text-align: center;
+}
+
+.cards .player1,
+.cards .player2 {
+    background-color: #34495e;
+    border-color: #d7ff8c;
+    color: #d7ff8c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: max-content;
+    padding: 2vw;
+    border-radius: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-box-shadow: 5px 1px 75px -10px rgba(255, 255, 255, 0.78);
+    box-shadow: 5px 1px 75px -10px rgba(255, 255, 255, 0.78);
+    font-size: 4vw;
+    transition-duration: var(--time);
+    cursor: context-menu;
+}
+
+.player1:hover,
+.player2:hover {
+    background-color: #0093E9;
+    color: white;
+    border: 1px solid white;
+    transition-duration: var(--time);
+}
+
+.hidden {
+    color: transparent;
+}
+
+
+.game {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    height: 60vh;
+    width: 90vw;
+
+}
+
+.ttt {
+
+    margin: 0 auto;
+    background-color: #34495e;
+    color: #fff;
+    border: 6px solid #2c3e50;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    width: 60vh;
+    height: 60vh;
+
+}
+
+.hide {
+    display: none !important;
+    width: 5vw;
+    height: 10vh;
+    left: 0;
+    bottom: 0;
+}
+
+.box {
+    border: 6px solid #2c3e50;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    border-radius: 2px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    border: 6px solid #eee;
+    transition-duration: var(--time);
+}
+
+#fname,
+#lname {
+    border-radius: 1rem;
+}
+
+
+.clear {
+    width: 8vh;
+    height: 4vh;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #0093E9;
+    color: white;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5vh;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition-duration: var(--time);
+}
+
+.clear:hover {
+    background-color: #34495e;
+    border-color: #d7ff8c;
+    color: #d7ff8c;
+    transition-duration: var(--time);
+
+}
+
+.turns-card {
+    width: max-content;
+    height: max-content;
+    padding: 10px 20px;
+    border: 1px solid;
+    background-color: #34495e;
+    border-color: #d7ff8c;
+    color: #d7ff8c;
+    border-radius: 2rem;
+    font-size: 4vw;
+    text-align: center;
+    font-weight: 700;
+    transition-duration: var(--time);
+    cursor: context-menu;
+}
+
+.turns-card:hover {
+    background-color: #0093E9;
+    color: white;
+    border: 1px solid white;
+    transition-duration: var(--time);
+}
+
+.popup {
+    width: 40vw;
+    height: 20vh;
+    border-radius: 5vw;
+    background-color: #34495e;
+    border-color: #d7ff8c;
+    color: #d7ff8c;
+    -webkit-box-shadow: 51px 38px 109px 22px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 51px 38px 109px 22px rgba(0, 0, 0, 0.64);
+    box-shadow: 51px 38px 109px 22px rgba(0, 0, 0, 0.64);
+    display: flex;
+    transition-duration: var(--time);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 30vw;
+    top: 75vh;
+    font-size: 5vw;
+    text-align: center;
+}
+
+.popup::after {
+    position: relative;
+    top: -10vh;
+    right: -5vw;
+    background-color: red;
+    content: "X";
+    border-radius: 50%;
+    width: 7vw;
+    height: 7vw;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+
+}
+
+#winner {
+    text-align: center;
+    padding-left: 3vw;
+}
